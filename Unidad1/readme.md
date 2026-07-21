@@ -1,4 +1,4 @@
-#Diario de la unidad 1
+# Diario de la unidad 1
 
 Mi codigo inicial:
 ``` js
