@@ -1,0 +1,47 @@
+setcpm(92/4)
+
+stack(
+  // KICK
+  s("bd ~ bd ~")
+    .bank("RolandTR909")
+    .gain(0.9),
+
+  // HI-HAT
+  s("hh ~ hh ~ hh ~ hh ~")
+    .bank("RolandTR909")
+    .gain(0.18),
+
+  // CLAP
+  s("~ cp ~ cp")
+    .bank("RolandTR909")
+    .gain(0.28),
+
+  // BASS MÁS DINÁMICO
+  note("c2 ~ c2 eb2 g2 ~ bb2 g2 eb2")
+    .s("sawtooth")
+    .lpf(650)
+    .gain(0.32)
+    .fast(2),
+
+  // PAD ATMOSFÉRICO
+  note("<[c4 eb4 g4] [bb3 d4 f4] [ab3 c4 eb4] [g3 bb3 d4]>")
+    .s("sawtooth")
+    .gain(0.07)
+    .slow(4)
+    .lpf(500)
+    .room(0.9)
+    .size(0.95)
+    .delay(0.25)
+    .delayfeedback(0.35),
+
+  // MELODÍA MÁS MODERNA
+  note("c5 eb5 g5 bb5 g5 eb5 c5 g5")
+    .s("sawtooth")
+    .gain(0.10)
+    .fast(1.5)
+    .lpf(1400)
+    .room(0.7)
+    .size(0.8)
+    .delay(0.3)
+    .delayfeedback(0.3)
+)
