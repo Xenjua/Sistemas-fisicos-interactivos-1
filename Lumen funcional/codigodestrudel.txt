@@ -45,3 +45,57 @@ stack(
     .delay(0.3)
     .delayfeedback(0.3)
 )
+
+
+
+CODIGO NUEVO
+
+
+setcpm(92/4)
+
+stack(
+
+  // KICK
+  s("bd ~ bd ~")
+    .bank("RolandTR909")
+    .gain(0.85),
+
+  // HI-HAT
+  s("hh ~ hh ~ hh ~ hh ~")
+    .bank("RolandTR909")
+    .gain(0.16),
+
+  // CLAP
+  s("~ cp ~ cp")
+    .bank("RolandTR909")
+    .gain(0.22),
+
+  // BASS
+  note("c2 ~ c2 eb2 g2 ~ bb2 g2 eb2")
+    .s("sawtooth")
+    .lpf(600)
+    .gain(0.28)
+    .fast(2),
+
+  // PAD
+  note("<[c4 eb4 g4] [bb3 d4 f4] [ab3 c4 eb4] [g3 bb3 d4]>")
+    .s("sawtooth")
+    .gain(0.055)
+    .slow(4)
+    .lpf(450)
+    .room(0.9)
+    .size(0.95)
+    .delay(0.22)
+    .delayfeedback(0.25),
+
+  // MELODY
+  note("c5 ~ eb5 g5 ~ bb5 g5 eb5")
+    .s("sawtooth")
+    .gain(0.075)
+    .fast(1.25)
+    .lpf(1200)
+    .room(0.7)
+    .size(0.8)
+    .delay(0.25)
+    .delayfeedback(0.22)
+)
